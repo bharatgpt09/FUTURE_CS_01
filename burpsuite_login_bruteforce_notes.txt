@@ -1,0 +1,19 @@
+# Authentication Flaw Testing
+
+## Target
+http://testphp.vulnweb.com/login.php
+
+## Method
+Used Burp Suite Intruder to brute-force password for username=admin
+
+## Payloads
+admin  
+password  
+123456  
+test  
+qwerty
+
+## Observation
+- Login succeeded with weak password
+- No account lockout
+- No CAPTCHA or delay between attempts

